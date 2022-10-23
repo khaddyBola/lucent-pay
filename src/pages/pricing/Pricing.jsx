@@ -4,6 +4,8 @@ import './pricing.css';
 import SectionHead from '../../components/SectionHead';
 import { pricing } from '../../data';
 import Card from '../../UI/Card';
+import {faq} from '../../data';
+
 
 const Pricing = () => {
   return (
@@ -36,8 +38,7 @@ const Pricing = () => {
                                 <summary>{icon2} <small>Lorem ipsum dolor sit </small></summary>
                                 <summary>{icon2} <small>Lorem ipsum dolor sit </small></summary>
                                 <summary>{icon2} <small>Lorem ipsum dolor sit </small></summary>
-                                
-                               
+                            
                                 <h2>{button}</h2>
                             </Card>
                         )
@@ -47,8 +48,32 @@ const Pricing = () => {
              
       </div>
 
+    <section className='faqs'>
+      <div className="container faqs-container">
+        <SectionHead title="FAQ" className="faq-head"/>
+        <h2>Frequently <span>Asked</span> Questions</h2>
+     
+      <div className='faq-wrapper'>
+          {
+            faq.map(({question, answer, id}) => {
+              return (
+                <Card key={id} className='faq-card'>
+                    <h4>{question}</h4>
+                    <p>{answer}</p>
+                  </Card>
+                )
+            })
+          }
+      </div>
+      </div>
     </section>
-  )
+  </section>
+)
+  
 }
+
+
+
+
 
 export default Pricing

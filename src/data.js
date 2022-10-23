@@ -65,24 +65,23 @@ export const testimonials = [
 export const company = [
     {
         id: 1,
-        name: 'Adam Saheed',
-        quote: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi necessitatibus aperiam culpa eius consequuntur vero. In expedita numquam consectetur non officia iusto.',
-        job: 'Web Developer',
-        avatar: require('./Images/saiid.webp')
+        icon: require('./Images/Consultation.png'),
+        title: 'Communicative',
+        info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis'
     },
     {
         id: 2,
-        name: 'Azeez Abidoye',
-        quote: 'Harum quaerat hic consequuntur molestias repellat ad quo tenetur vitae rem, labore quisquam? Atque, assumenda rerum this and that odit harum quaerat hic praesentium quisquam quae, enim iste ipsam id repellat',
-        job: 'Software Developer',
-        avatar: require('./Images/azeez-abidoye.jpg')
+        icon: require('./Images/Inovation.png'),
+        title: 'Smart People',
+        info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis'
+
     },
     {
         id: 3,
-        name: 'Aliu Musa',
-        quote: 'Maxime minima cumque sit amet consectetur adipisicing elit. Praesentium ipsam facere ea a laboriosam sed? Quod vel voluptates a! Maxime minima cumque aut? In expedita numquam consectetur non officia iusto.',
-        job: 'Blockchain Engineer',
-        avatar: require('./Images/aliu-musa.jpg')
+        icon: require('./Images/Strategy.png'),
+        title: 'Strategy',
+        info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis'
+
     },
 ]
 

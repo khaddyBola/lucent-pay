@@ -1,56 +1,39 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './company.css'
 import PagesHeader from '../../components/PagesHeader';
 import { company } from '../../data';
 import Card from '../../UI/Card';
 import SectionHead from '../../components/SectionHead';
-import {IoIosArrowDropleftCircle} from 'react-icons/io'
-import {IoIosArrowDroprightCircle} from 'react-icons/io'
+import Image from '../../Images/team-1.jpeg';
 
 const Company = () => {
-  const [index, setIndex] = useState(0)
-  const {id, name, quote, job, avatar} = company[index]
-
-  const prevCompanyHandler = () => {
-    setIndex(prev => prev - 1)
-
-    if (index <= 0) {
-      return setIndex(company.length - 1)
-    }
-  }
-
-  const nextCompanyHandler = () => {
-    setIndex(prev => prev + 1)
-
-    if(index >= company.length - 1) {
-      return setIndex(0)
-    }
-  }
   return (
     <section className='companys'>
       <PagesHeader title='Company' page='Company' />
       <div className="container companys-container">
-        <SectionHead title="Company" className="company-head"/>
-          <h2>What They <span>Say</span> About LucentPay</h2>
+        <SectionHead title="About" className="company-head"/>
+          <h2> <span>Who</span> We Are?</h2>
+          <p> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, <br />
+            sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+          </p>
+
+          <div className='company-image-container'>
+            <img src={Image} alt=''/>
+          </div>
 
           <div className="company-wrapper">
-            <Card key={id} className="company">
-              <div className="company-avatar">
-                <img src={avatar} alt={name} />
-              </div>
-
-              <div>
-                <p className='company-quote'>{`"${quote}"`}</p>
-                <h4>{name}</h4>
-                <small className="company-title">{job}</small>
-              </div>
-
+          {
+            company.map(({icon, title, info, id}) => {
+            return (
+            <Card key={id} className='company-card'>
+              <img src={icon} alt="icon"/>
+              <h4>{title}</h4>
+              <small>{info}</small>
             </Card>
-            <div className="companys-btn-container">
-              <button className="companys-btn" onClick={prevCompanyHandler}><IoIosArrowDropleftCircle/></button>
-              <button className="companys-btn" onClick={nextCompanyHandler}><IoIosArrowDroprightCircle/></button>
-            </div>
-      </div>
+            )
+            })
+          }
+        </div>
       </div>
     </section>
   )

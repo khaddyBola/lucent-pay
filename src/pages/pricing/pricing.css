@@ -4,7 +4,6 @@
     justify-content: center;
 }
 
-
 .pricing-head, 
 .pricing-container h2, 
 .pricing-container p{
@@ -66,6 +65,7 @@
     color: var(--color-primary);
 }
 
+
 .pricing-card h2 {
     margin-top: 6rem;
     border: 2px solid #f0f0fa;
@@ -79,6 +79,7 @@
     -ms-border-radius: 10px 40px 30px;
     -o-border-radius: 10px 40px 30px;
 }
+
 
 .pricing-card h2:hover {
     background: var(--color-secondary);
